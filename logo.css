@@ -1,0 +1,60 @@
+
+.bg  {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.path {
+  	animation: draw 4s infinite;
+}
+
+.logo-svg{
+	stroke-width:2;
+    fill-opacity:0;
+    
+}
+.logo-svg #a{
+    stroke:#932232;
+    fill:#932232;
+    animation:dashkn 5s ease-in-out infinite;
+}
+.logo-svg #b{
+    stroke:#3A3A3D;
+    fill:#3A3A3D;
+    animation:dashkn 5s ease-in-out infinite;
+}
+
+@keyframes draw {
+	50% {
+	    stroke-dashoffset: 0;
+	}
+}
+@keyframes dashkn{
+    0%  {
+    	fill-opacity:0;
+    	stroke-dashoffset:1000;
+    }
+    20%  {
+		fill-opacity:0;
+	}
+	40%  {
+		fill-opacity:1;
+	}
+    45%{
+    	fill-opacity:1;
+    	stroke-dashoffset:0;
+    }
+    70%{
+    	fill-opacity:1;
+    	stroke-dashoffset:0;
+    }
+    80%{
+    	fill-opacity:1;
+		stroke-dashoffset:0;
+    }
+    100%{
+    	fill-opacity:0;
+    	stroke-dashoffset:1000;
+    }
+}
